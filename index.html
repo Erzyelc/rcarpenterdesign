@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elara Voss — Digital Product Designer</title>
+    <meta
+      name="description"
+      content="Elara Voss is an independent digital product designer crafting interfaces, identities and interactive experiences for ambitious brands."
+    />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      rel="stylesheet"
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap"
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23D6FF4B'/></svg>" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader__count">00</div>
+      <div class="preloader__bar"><span></span></div>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor" aria-hidden="true">
+      <div class="cursor__dot"></div>
+      <div class="cursor__ring"></div>
+    </div>
+
+    <!-- WebGL background -->
+    <canvas id="gl" aria-hidden="true"></canvas>
+
+    <header class="nav">
+      <a href="#top" class="nav__logo" data-magnetic>
+        <span class="nav__logo-mark"></span>
+        <span>Elara&nbsp;Voss</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work" class="nav__link" data-hover>Work</a>
+        <a href="#about" class="nav__link" data-hover>About</a>
+        <a href="#services" class="nav__link" data-hover>Services</a>
+      </nav>
+      <a href="#contact" class="nav__cta" data-magnetic data-hover>
+        <span>Let's talk</span>
+      </a>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="hero__meta">
+          <p class="hero__meta-item" data-fade>Independent designer</p>
+          <p class="hero__meta-item" data-fade>Lisbon → Worldwide</p>
+          <p class="hero__meta-item" data-fade>Available Q4 2026</p>
+        </div>
+        <h1 class="hero__title">
+          <span class="line"><span class="line__inner">Design</span></span>
+          <span class="line line--indent">
+            <span class="line__inner">that <em>feels</em></span>
+          </span>
+          <span class="line"><span class="line__inner">inevitable<span class="accent">.</span></span></span>
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__blurb" data-fade>
+            I'm Elara — a digital product designer turning complex problems
+            into interfaces people love to touch. Eight years, four continents,
+            one obsession: the details.
+          </p>
+          <a href="#work" class="hero__scroll" data-hover data-magnetic>
+            <span class="hero__scroll-ring">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="hero__scroll-label">Scroll</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Interfaces</span><i>✦</i><span>Identity</span><i>✦</i>
+          <span>Motion</span><i>✦</i><span>Prototypes</span><i>✦</i>
+          <span>Design&nbsp;Systems</span><i>✦</i>
+          <span>Interfaces</span><i>✦</i><span>Identity</span><i>✦</i>
+          <span>Motion</span><i>✦</i><span>Prototypes</span><i>✦</i>
+          <span>Design&nbsp;Systems</span><i>✦</i>
+        </div>
+      </div>
+
+      <!-- WORK -->
+      <section class="work" id="work">
+        <div class="section-head">
+          <p class="section-head__label" data-fade>Selected work</p>
+          <h2 class="section-head__title" data-split>Four projects, zero compromises</h2>
+        </div>
+
+        <ul class="work__list">
+          <li class="project" data-project>
+            <a href="#contact" class="project__link" data-hover-view>
+              <div class="project__media" style="--tint: #2b3a1e">
+                <div class="project__visual project__visual--pulse">
+                  <div class="pv-phone">
+                    <div class="pv-phone__notch"></div>
+                    <div class="pv-phone__row"></div>
+                    <div class="pv-phone__row pv-phone__row--wide"></div>
+                    <div class="pv-phone__chart">
+                      <i style="--h:.45"></i><i style="--h:.7"></i><i style="--h:.35"></i>
+                      <i style="--h:.9"></i><i style="--h:.6"></i><i style="--h:.8"></i>
+                    </div>
+                    <div class="pv-phone__pill"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project__info">
+                <span class="project__index">01</span>
+                <h3 class="project__name">Pulse</h3>
+                <p class="project__desc">Fintech app rethinking how Gen-Z saves — 2.4M downloads in year one.</p>
+                <span class="project__tags">Product · iOS · Design system</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="project" data-project>
+            <a href="#contact" class="project__link" data-hover-view>
+              <div class="project__media" style="--tint: #33251c">
+                <div class="project__visual project__visual--atlas">
+                  <div class="pv-globe">
+                    <i></i><i></i><i></i>
+                  </div>
+                  <div class="pv-card">
+                    <b></b><u></u><u style="width:55%"></u>
+                  </div>
+                </div>
+              </div>
+              <div class="project__info">
+                <span class="project__index">02</span>
+                <h3 class="project__name">Atlas</h3>
+                <p class="project__desc">Travel platform identity &amp; web experience — Site of the Day, twice.</p>
+                <span class="project__tags">Branding · Web · Motion</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="project" data-project>
+            <a href="#contact" class="project__link" data-hover-view>
+              <div class="project__media" style="--tint: #1c2733">
+                <div class="project__visual project__visual--nocturne">
+                  <div class="pv-wave">
+                    <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                      <path d="M0 30 Q 25 5, 50 30 T 100 30 T 150 30 T 200 30" fill="none" />
+                    </svg>
+                  </div>
+                  <div class="pv-dial"><i></i></div>
+                </div>
+              </div>
+              <div class="project__info">
+                <span class="project__index">03</span>
+                <h3 class="project__name">Nocturne</h3>
+                <p class="project__desc">Sleep-tech companion app — calm by design, WCAG AAA throughout.</p>
+                <span class="project__tags">Product · Android · Accessibility</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="project" data-project>
+            <a href="#contact" class="project__link" data-hover-view>
+              <div class="project__media" style="--tint: #2e1e30">
+                <div class="project__visual project__visual--forma">
+                  <div class="pv-grid">
+                    <i></i><i></i><i></i><i></i><i></i><i></i>
+                  </div>
+                </div>
+              </div>
+              <div class="project__info">
+                <span class="project__index">04</span>
+                <h3 class="project__name">Forma</h3>
+                <p class="project__desc">Design system powering 40+ products at a Fortune 500 — tokens to docs.</p>
+                <span class="project__tags">Systems · Tooling · Docs</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <p class="about__label" data-fade>About</p>
+        <p class="about__text" data-words>
+          I believe great design is invisible until it's gone. For eight years
+          I've helped startups and studios ship products that feel effortless —
+          because every pixel, easing curve and empty space earned its place.
+        </p>
+        <div class="about__stats">
+          <div class="stat" data-fade>
+            <span class="stat__num" data-count="8">0</span>
+            <span class="stat__label">Years designing</span>
+          </div>
+          <div class="stat" data-fade>
+            <span class="stat__num" data-count="46">0</span>
+            <span class="stat__label">Products shipped</span>
+          </div>
+          <div class="stat" data-fade>
+            <span class="stat__num" data-count="12">0</span>
+            <span class="stat__label">Design awards</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="services" id="services">
+        <div class="section-head">
+          <p class="section-head__label" data-fade>Services</p>
+          <h2 class="section-head__title" data-split>What I do best</h2>
+        </div>
+        <ul class="services__list">
+          <li class="service" data-service data-hover>
+            <span class="service__index">01</span>
+            <h3 class="service__name">Product Design</h3>
+            <p class="service__desc">End-to-end: research, flows, UI, handoff. Native or web.</p>
+          </li>
+          <li class="service" data-service data-hover>
+            <span class="service__index">02</span>
+            <h3 class="service__name">Design Systems</h3>
+            <p class="service__desc">Tokens, components, docs — systems your engineers actually use.</p>
+          </li>
+          <li class="service" data-service data-hover>
+            <span class="service__index">03</span>
+            <h3 class="service__name">Interaction &amp; Motion</h3>
+            <p class="service__desc">Micro-interactions and motion language that make products feel alive.</p>
+          </li>
+          <li class="service" data-service data-hover>
+            <span class="service__index">04</span>
+            <h3 class="service__name">Creative Direction</h3>
+            <p class="service__desc">From brand voice to launch site — one coherent, memorable story.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <p class="contact__label" data-fade>Got a project?</p>
+        <h2 class="contact__title">
+          <span class="line"><span class="line__inner">Let's make</span></span>
+          <span class="line"><span class="line__inner">it <span class="accent">inevitable</span></span></span>
+        </h2>
+        <a href="mailto:hello@elaravoss.design" class="contact__btn" data-magnetic data-hover>
+          <span>hello@elaravoss.design</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M7 17L17 7m0 0H8m9 0v9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Elara Voss</p>
+      <div class="footer__links">
+        <a href="#top" data-hover>Twitter</a>
+        <a href="#top" data-hover>Dribbble</a>
+        <a href="#top" data-hover>LinkedIn</a>
+      </div>
+      <p class="footer__local">Lisbon, PT — <span data-clock>00:00</span></p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
