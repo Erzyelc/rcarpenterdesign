@@ -294,10 +294,10 @@ window.addEventListener("scroll", updateNav, { passive: true });
 /* ---------- Local time in footer ---------- */
 const clockEl = document.querySelector("[data-clock]");
 function tickClock() {
-  clockEl.textContent = new Date().toLocaleTimeString("en-GB", {
+  clockEl.textContent = new Date().toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
-    timeZone: "Europe/Lisbon",
+    timeZone: "America/New_York",
   });
 }
 tickClock();
