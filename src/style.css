@@ -284,16 +284,11 @@ em {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 var(--pad) clamp(2rem, 5vh, 4rem);
+  padding: clamp(6.75rem, 14vh, 9rem) var(--pad) clamp(2rem, 5vh, 4rem);
   position: relative;
 }
 
 .hero__meta {
-  position: absolute;
-  top: clamp(5rem, 12vh, 7rem);
-  left: var(--pad);
-  right: var(--pad);
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -304,9 +299,11 @@ em {
 }
 
 .hero__title {
+  margin-top: auto;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(3.4rem, 12.5vw, 11.5rem);
+  /* sized by width but capped by height so short/wide viewports don't overflow */
+  font-size: clamp(3.4rem, min(12.5vw, 17svh), 11.5rem);
   line-height: 0.95;
   letter-spacing: -0.02em;
   text-transform: uppercase;
