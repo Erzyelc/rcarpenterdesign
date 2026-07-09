@@ -182,16 +182,12 @@ em {
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-}
-
-/* particle variants are dimmed and vignetted so type stays legible */
-.bg-dimmed #gl {
-  opacity: 0.42;
   z-index: -2;
+  opacity: 0.42;
 }
 
-.bg-dimmed::before {
+/* scrim between the dot grid and content keeps type legible */
+body::before {
   content: "";
   position: fixed;
   inset: 0;
