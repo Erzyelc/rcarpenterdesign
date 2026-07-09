@@ -110,12 +110,15 @@ export function createScene(canvas, { reducedMotion = false } = {}) {
   build();
   window.addEventListener("resize", build);
 
+  // touch devices get a static grid — no displacement while scrolling
   const targetMouse = new THREE.Vector2(-99999, -99999);
-  window.addEventListener(
-    "pointermove",
-    (e) => targetMouse.set(e.clientX, e.clientY),
-    { passive: true }
-  );
+  if (window.matchMedia("(pointer: fine)").matches) {
+    window.addEventListener(
+      "pointermove",
+      (e) => targetMouse.set(e.clientX, e.clientY),
+      { passive: true }
+    );
+  }
 
   const clock = new THREE.Clock();
   let running = true;
