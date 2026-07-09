@@ -41,6 +41,7 @@
         <a href="#work" class="nav__link" data-hover>Work</a>
         <a href="#about" class="nav__link" data-hover>About</a>
         <a href="#services" class="nav__link" data-hover>Services</a>
+        <a href="#pricing" class="nav__link" data-hover>Pricing</a>
       </nav>
       <a href="#contact" class="nav__cta" data-magnetic data-hover>
         <span>Let's talk</span>
@@ -238,6 +239,131 @@
             <p class="service__desc">From brand voice to launch site — one coherent, memorable story.</p>
           </li>
         </ul>
+      </section>
+
+      <!-- PRICING -->
+      <section class="pricing" id="pricing">
+        <div class="section-head">
+          <p class="section-head__label" data-fade>Pricing</p>
+          <h2 class="section-head__title" data-split>Simple, honest numbers</h2>
+        </div>
+
+        <div class="pricing__grid">
+          <article class="price-card" data-fade>
+            <div class="price-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12L13 2z" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="price-card__name">Intro Call &amp; Teardown</h3>
+            <p class="price-card__desc">
+              A 30-minute call plus a written teardown of one screen or flow.
+              No pitch, no strings.
+            </p>
+            <span class="price-card__chip">Starting from</span>
+            <p class="price-card__amount">$0</p>
+            <div class="price-card__fill"></div>
+            <a
+              href="mailto:ryancarpenterdesign@gmail.com?subject=Intro%20call%20%2B%20teardown"
+              class="price-card__btn"
+              data-hover
+              >Book a call</a
+            >
+          </article>
+
+          <article class="price-card price-card--featured" data-fade data-pricing>
+            <div class="price-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 3l8 4.5-8 4.5-8-4.5L12 3z" stroke-linejoin="round"/>
+                <path d="M4 12.5L12 17l8-4.5M4 16.5L12 21l8-4.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="price-card__name">Landing Page Design &amp; Dev</h3>
+            <p class="price-card__desc">
+              A custom landing page designed and built to present your offer
+              clearly — strategy to ship.
+            </p>
+            <div class="seg" role="group" aria-label="Project scope">
+              <button type="button" class="seg__btn is-active" data-base="6000" data-scope="Landing page" data-hover>
+                Landing page
+              </button>
+              <button type="button" class="seg__btn" data-base="9500" data-scope="Multi-page" data-hover>
+                Multi-page
+              </button>
+            </div>
+            <p class="price-card__amount" data-price>$6,000</p>
+            <ul class="addons">
+              <li class="addon">
+                <div>
+                  <p class="addon__name">+ Webflow / Framer build</p>
+                  <p class="addon__price">Price: $2,500</p>
+                </div>
+                <button
+                  type="button"
+                  class="switch"
+                  role="switch"
+                  aria-checked="false"
+                  data-addon="2500"
+                  data-addon-name="build"
+                  aria-label="Add Webflow or Framer build"
+                  data-hover
+                >
+                  <i></i>
+                </button>
+              </li>
+              <li class="addon">
+                <div>
+                  <p class="addon__name">+ Brand identity</p>
+                  <p class="addon__price">Price: $1,000</p>
+                </div>
+                <button
+                  type="button"
+                  class="switch"
+                  role="switch"
+                  aria-checked="false"
+                  data-addon="1000"
+                  data-addon-name="brand identity"
+                  aria-label="Add brand identity"
+                  data-hover
+                >
+                  <i></i>
+                </button>
+              </li>
+            </ul>
+            <a
+              href="mailto:ryancarpenterdesign@gmail.com?subject=Landing%20page%20project"
+              class="price-card__btn price-card__btn--accent"
+              data-cta
+              data-hover
+              >Start this project</a
+            >
+          </article>
+
+          <article class="price-card" data-fade>
+            <div class="price-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="4" y="4" width="7" height="7" rx="1.5"/>
+                <rect x="13" y="4" width="7" height="7" rx="1.5"/>
+                <rect x="4" y="13" width="7" height="7" rx="1.5"/>
+                <rect x="13" y="13" width="7" height="7" rx="3.5"/>
+              </svg>
+            </div>
+            <h3 class="price-card__name">Design Retainer</h3>
+            <p class="price-card__desc">
+              For teams that already shipped and need ongoing design — new
+              features, interface updates, design ops.
+            </p>
+            <span class="price-card__chip">Starting from</span>
+            <p class="price-card__amount">$1,500<span class="price-card__per">/mo</span></p>
+            <div class="price-card__fill"></div>
+            <a
+              href="mailto:ryancarpenterdesign@gmail.com?subject=Design%20retainer%20availability"
+              class="price-card__btn"
+              data-hover
+              >Request availability</a
+            >
+          </article>
+        </div>
       </section>
 
       <!-- CONTACT -->

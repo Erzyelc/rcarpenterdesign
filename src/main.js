@@ -283,6 +283,79 @@ if (finePointer && !reducedMotion) {
   });
 }
 
+/* ---------- Pricing configurator ---------- */
+const pricingCard = document.querySelector("[data-pricing]");
+if (pricingCard) {
+  const priceEl = pricingCard.querySelector("[data-price]");
+  const ctaEl = pricingCard.querySelector("[data-cta]");
+  const segBtns = pricingCard.querySelectorAll(".seg__btn");
+  const switches = pricingCard.querySelectorAll(".switch");
+  const shown = { value: 6000 };
+
+  const fmt = (n) => `$${Math.round(n).toLocaleString("en-US")}`;
+
+  function total() {
+    const base = Number(
+      pricingCard.querySelector(".seg__btn.is-active").dataset.base
+    );
+    let sum = base;
+    switches.forEach((sw) => {
+      if (sw.getAttribute("aria-checked") === "true") {
+        sum += Number(sw.dataset.addon);
+      }
+    });
+    return sum;
+  }
+
+  function render() {
+    const t = total();
+
+    if (reducedMotion) {
+      shown.value = t;
+      priceEl.textContent = fmt(t);
+    } else {
+      gsap.to(shown, {
+        value: t,
+        duration: 0.6,
+        ease: "power2.out",
+        overwrite: true,
+        onUpdate: () => (priceEl.textContent = fmt(shown.value)),
+      });
+    }
+
+    const scope = pricingCard.querySelector(".seg__btn.is-active").dataset
+      .scope;
+    const extras = [...switches]
+      .filter((sw) => sw.getAttribute("aria-checked") === "true")
+      .map((sw) => sw.dataset.addonName);
+    const subject = `${scope} project — ${fmt(t)}${
+      extras.length ? ` (with ${extras.join(" + ")})` : ""
+    }`;
+    ctaEl.href = `mailto:ryancarpenterdesign@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}`;
+  }
+
+  segBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      segBtns.forEach((b) => b.classList.toggle("is-active", b === btn));
+      render();
+    });
+  });
+
+  switches.forEach((sw) => {
+    sw.addEventListener("click", () => {
+      sw.setAttribute(
+        "aria-checked",
+        sw.getAttribute("aria-checked") === "true" ? "false" : "true"
+      );
+      render();
+    });
+  });
+
+  render();
+}
+
 /* ---------- Nav scrolled state ---------- */
 const navEl = document.querySelector(".nav");
 function updateNav() {
