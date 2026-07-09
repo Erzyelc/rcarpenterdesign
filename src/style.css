@@ -185,6 +185,25 @@ em {
   z-index: -1;
 }
 
+/* particle variants are dimmed and vignetted so type stays legible */
+.bg-dimmed #gl {
+  opacity: 0.42;
+  z-index: -2;
+}
+
+.bg-dimmed::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 80% 60% at 35% 55%,
+    rgba(11, 11, 13, 0.55),
+    transparent 70%
+  );
+}
+
 /* ============ Nav ============ */
 .nav {
   position: fixed;

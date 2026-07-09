@@ -12,6 +12,9 @@ if (reducedMotion) document.documentElement.classList.add("reduced-motion");
 /* ---------- WebGL background (lazy — three.js is the heaviest dep) ----------
    Switch variants with ?bg=grid | ?bg=flow (default: smoke shader). */
 const bgVariant = new URLSearchParams(window.location.search).get("bg");
+if (bgVariant === "grid" || bgVariant === "flow") {
+  document.body.classList.add("bg-dimmed");
+}
 const sceneImport =
   bgVariant === "grid"
     ? import("./scene-grid.js")
