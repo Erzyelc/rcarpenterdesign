@@ -9,8 +9,16 @@ const finePointer = window.matchMedia("(pointer: fine)").matches;
 
 if (reducedMotion) document.documentElement.classList.add("reduced-motion");
 
-/* ---------- WebGL background (lazy — three.js is the heaviest dep) ---------- */
-import("./scene.js").then(({ createScene }) => {
+/* ---------- WebGL background (lazy — three.js is the heaviest dep) ----------
+   Switch variants with ?bg=grid | ?bg=flow (default: smoke shader). */
+const bgVariant = new URLSearchParams(window.location.search).get("bg");
+const sceneImport =
+  bgVariant === "grid"
+    ? import("./scene-grid.js")
+    : bgVariant === "flow"
+      ? import("./scene-flow.js")
+      : import("./scene.js");
+sceneImport.then(({ createScene }) => {
   createScene(document.getElementById("gl"), { reducedMotion });
 });
 
